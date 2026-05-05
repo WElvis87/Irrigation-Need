@@ -8,8 +8,8 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(BASE_DIR, "..", "models", "model.pkl")
 label_encoder_path = os.path.join(BASE_DIR, "..", "models", "label_encoder.pkl")
-model = joblib.load("../models/model.pkl")
-le = joblib.load("../models/label_encoder.pkl")
+model = joblib.load(model_path)
+le = joblib.load(label_encoder_path)
 
 st.set_page_config(page_title="Irrigation Need")
 st.write("ENTER DETAILS FOR IRRIGATION NEED")
