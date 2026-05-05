@@ -4,11 +4,8 @@ from pathlib import Path
 import pandas as pd
 
 # Load Model
-root_dir = Path(__file__).resolve().parent.parent
-model_path = root_dir/"models"/"model.pkl"
-label_encoder_path = root_dir/"models"/"label_encoder.pkl"
-model = joblib.load(model_path)
-le = joblib.load(label_encoder_path)
+model = joblib.load("../models/model.pkl")
+le = joblib.load("../models/label_encoder.pkl")
 
 st.set_page_config(page_title="Irrigation Need")
 st.write("ENTER DETAILS FOR IRRIGATION NEED")
