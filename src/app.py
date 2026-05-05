@@ -2,8 +2,12 @@ import joblib
 import streamlit as st
 from pathlib import Path
 import pandas as pd
+import os
 
 # Load Model
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(BASE_DIR, "..", "models", "model.pkl")
+label_encoder_path = os.path.join(BASE_DIR, "..", "models", "label_encoder.pkl")
 model = joblib.load("../models/model.pkl")
 le = joblib.load("../models/label_encoder.pkl")
 
